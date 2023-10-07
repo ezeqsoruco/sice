@@ -1,0 +1,159 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+header {
+    background-color: #031a60;
+}
+
+body {
+    color: #031a60;
+}
+
+.custom-toggler .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+
+.custom-toggler {
+    color: #ffffff94 !important;
+}
+
+.opciones div ul .nav-item a{
+    color: #fff;
+    text-decoration: none;
+}
+
+.opciones div ul .nav-item:hover {
+    background-color: #5d77c5;
+    border-radius: 10px;
+    transition: 0.5s;
+}
+
+.opciones div ul .nav-item a:hover{
+    color: #fff;
+}
+
+.opciones div ul .nav-item .active {
+    color: #fff !important;
+    background-color: #5d77c5;
+    border-radius: 10px;
+}
+
+.quienes-somos {
+    padding: 7rem;
+}
+
+.padding-texto {
+    width: 52%;
+    padding: 1rem;
+}
+
+.card__prof-skills {
+    background: #dbdcdf;
+    padding: 2rem;
+}
+
+.card__card-body-progress .card-text{
+    color: #000;
+}
+
+.progress {
+    height: 0.5rem;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.progress-bar {
+    border-radius: 5px;
+}
+
+#clientes {
+    background-color: #031a60;
+    color: #fff;
+    padding: 3rem;
+}
+
+#servicios .tab {
+    padding: 7rem;
+}
+
+.tab-opciones {
+    position: relative;
+    width: 80%;
+}
+
+.tab-opciones  .linea {
+    position: absolute;
+    bottom: 1px; 
+    left: 0;
+    width: 80%;
+    height: 1px; 
+    background-color: #ccc; 
+    z-index: -1;
+}
+
+.tab-opciones .nav-item {
+    width: 20%;
+    text-align: center;
+}
+
+.tab-opciones .nav-item .nav-link.active::before {
+    border-bottom:none ;
+}
+
+.tab-opciones .nav-item .nav-link {
+    font-weight: normal; 
+    color: #c1c2c3;
+    border-bottom:none ;
+}
+
+.tab-opciones .nav-item .nav-link.active {
+    font-weight: bold; 
+    color: #007bff;
+    border-bottom:none ;
+}
+
+.active + .linea-active {
+    display: block !important;
+    bottom: 0px; 
+    left: 0;
+    width: 100%;
+    height: 4px; 
+    z-index: 1;
+    background-color: #007bff; 
+    border-radius: 10px;
+}
+
+footer {
+    background-color: #031a60; 
+    color: #fff;
+}
+
+footer .logo {
+    padding-bottom: 3rem;
+}
+
+footer hr {
+    color: #fff;
+    opacity: 1;
+}
+@media (max-width: 992px) {
+    .quienes-somos {
+        padding: 3rem;
+    }
+
+    .padding-texto {
+        width: 80%;
+        padding: 0;
+    }
+
+    .tab-opciones {
+        width: 100%;
+    }
+
+    .tab-opciones .nav-item {
+        width: 100%;
+    }
+}

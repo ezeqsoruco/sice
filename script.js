@@ -9,6 +9,10 @@ function agregarClaseActive(event) {
   });
 
   this.classList.add("active");
+
+  if (this.href) {
+    location.href = this.href;
+  }
 }
 
 function filtrarServicios(event) {
@@ -37,6 +41,31 @@ function filtrarServicios(event) {
   });
 }
 
+function efectoBarraProgreso() {
+  let barras = document.querySelectorAll(".progress-bar");
+
+  barras.forEach((x, index) => {
+    x.classList.remove("inicio");
+    x.classList.add("final" + (index + 1));
+  });
+}
+
+function mostrarCard(element) {
+  let card = element.nextElementSibling;
+
+  element.classList.add("d-none");
+
+  card.classList.remove("d-none");
+}
+
+function cerrarCard(element, button) {
+  let card = button.offsetParent;
+  card.classList.add("d-none");
+
+  let imagen = document.getElementById(element).children[0];
+  imagen.classList.remove("d-none");
+}
+
 enlaces.forEach(function (enlace) {
   enlace.addEventListener("click", agregarClaseActive);
 });
@@ -44,3 +73,5 @@ enlaces.forEach(function (enlace) {
 tabs.forEach(function (tab) {
   tab.addEventListener("click", filtrarServicios);
 });
+
+efectoBarraProgreso();

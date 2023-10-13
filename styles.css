@@ -6,7 +6,11 @@
 }
 
 header {
-    background-color: #031a60;
+    background-color: #0d1f3d;
+}
+
+.logo {
+    width: 50%;
 }
 
 body {
@@ -42,18 +46,27 @@ body {
     border-radius: 10px;
 }
 
-.quienes-somos {
+.quienes-somos, .op-servicios, .contacto {
     padding: 7rem;
+    padding-top: 10rem;
 }
 
 .padding-texto {
     width: 52%;
     padding: 1rem;
+    padding-bottom: 4rem;
+}
+
+.padding-texto .titulo-link {
+    font-weight: 500;
 }
 
 .card__prof-skills {
     background: #dbdcdf;
-    padding: 2rem;
+    padding-top: 5rem !important;
+    padding-left: 4rem !important;
+    padding-right: 4rem !important;
+    padding-bottom: 5rem !important;
 }
 
 .card__card-body-progress .card-text{
@@ -65,18 +78,99 @@ body {
     box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
 }
 
-.progress-bar {
+.progress-bar.inicio {
+    width: 0%;
+}
+
+.progress-bar.animacion {
+    transition: all 2s ease 0.5s;
+}
+
+.progress-bar.final1 {
+    width: 90%;
     border-radius: 5px;
 }
 
-#clientes {
-    background-color: #031a60;
+.progress-bar.final2 {
+    width: 80%;
+    border-radius: 5px;
+}
+
+.progress-bar.final3 {
+    width: 70%;
+    border-radius: 5px;
+}
+
+.tab .tab-bloques {
+    transition: all 1s ease 0.5s;
+}
+
+.tab .tab__bloques .imagen {
+    background: url('./assets/images/construccion.jpg') center/contain no-repeat;
+    width: 500px;
+    height: 500px;
+    background-size: contain;
+}
+
+.bloques__img-text{
+    width: 100%;
+    height: 100%;
+    color: #ffffff;
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 1s ease 0s;
+}
+
+.bloques__img-text:hover{
+    transition: 0.5s;
+}
+
+.construccion {
+    background-color: #2e32ea;
+}
+
+.construccion:hover {
+    background-color: #2e32ea63;
+}
+
+.mantenimiento {
+    background-color: #1aedae;
+}
+
+.mantenimiento:hover {
+    background-color: #1aedae63;
+}
+
+.servicios {
+    background-color: #ea2ee7;
+}
+
+.servicios:hover {
+    background-color: #ea2ee763;
+}
+
+.card {
+    max-width: 55rem;
+    border-radius: 3px;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.card-body {
+    padding: 3rem;
+    padding-top: 10rem;
+    padding-bottom: 10rem;
+}
+
+#clientes, #estadisticas {
+    background-color: #2d4599;
     color: #fff;
     padding: 3rem;
 }
 
-#servicios .tab {
-    padding: 7rem;
+#op-servicios .tab {
+    gap:7rem
 }
 
 .tab-opciones {
@@ -107,6 +201,7 @@ body {
     font-weight: normal; 
     color: #c1c2c3;
     border-bottom:none ;
+    cursor: pointer;
 }
 
 .tab-opciones .nav-item .nav-link.active {
@@ -126,22 +221,48 @@ body {
     border-radius: 10px;
 }
 
+#contacto form {
+    width: 100%;
+}
+
 footer {
-    background-color: #031a60; 
+    background-color: #0d1f3d; 
     color: #fff;
 }
 
 footer .logo {
-    padding-bottom: 3rem;
+    padding-bottom: 5rem;
+    width: 10%;
 }
 
 footer hr {
     color: #fff;
     opacity: 1;
 }
+
+.head-estadistica .tab__bloques .imagen {
+    background: url(./assets/images/construccion.jpg) center/contain no-repeat;
+    width: 100%;
+    height: 500px;
+    background-size: contain;
+}
+
+.head-estadistica .tab__bloques .card{
+    box-shadow: none;
+    border: none;
+    width: 100%;
+}
+
+.head-estadistica .tab__bloques .card .card-body {
+    padding: 6rem;
+    padding-top: 2rem;
+    padding-bottom: 0rem;
+}
+
 @media (max-width: 992px) {
-    .quienes-somos {
-        padding: 3rem;
+    .quienes-somos, .op-servicios, .contacto {
+        padding: 2rem;
+        padding-top: 5rem;
     }
 
     .padding-texto {
@@ -150,10 +271,50 @@ footer hr {
     }
 
     .tab-opciones {
-        width: 100%;
+        width: 50%;
     }
 
     .tab-opciones .nav-item {
         width: 100%;
     }
+
+    #contacto form {
+        width: 70%;
+    }
+
+    .active + .linea-active {
+        display: none !important;
+    }
+
+    .imagen + .card {
+        max-width: 20rem;
+    }
+
+    .card-body {
+        padding: 0rem;
+        padding-top: 0rem;
+        padding-bottom: 0rem;
+    }
+
+    .quienes-somos .card {
+        width: 100% !important;
+    }
+
+    .quienes-somos .card .card-body {
+        padding: 1rem;
+        text-align: center;
+    }
+
+    .tab {
+        width: 100%;
+    }
+
+    .tab div {
+        width: 100%;
+    }
+
+    .tab .tab__bloques .imagen {
+        width: 100%;
+    }
+
 }
